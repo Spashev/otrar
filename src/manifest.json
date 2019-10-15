@@ -1,0 +1,31 @@
+{
+  "name": "OtrarExtension",
+  "description": "Google extension for OtrarTravel",
+  "version": "2.0",
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/logo.png"
+  },
+  "browser_action": {
+    "default_title": "otrar",
+    "default_icon": "icons/logo.png",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all frames": true,
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "http://test.test.cgr/response.php"
+  ]
+}
