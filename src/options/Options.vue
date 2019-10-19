@@ -52,12 +52,12 @@
                     </div>
                 </div>
                 <div id="menu1" class="container tab-pane fade"><br>
-                    <h3>Placeholder</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit autem dolorem earum illum?</p>
+                    <!-- <h3>Placeholder</!--> -->
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit autem dolorem earum illum?</p> -->
                 </div>
                 <div id="menu2" class="container tab-pane fade"><br>
-                    <h3>Placeholder</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    <!-- <h3>Placeholder</h3> -->
+                    <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> -->
                 </div>
             </div>
         </div>
