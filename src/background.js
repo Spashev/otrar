@@ -1,5 +1,5 @@
 console.log("background");
-
+/*
 chrome.webRequest.onSendHeaders.addListener(
     function(details) {
         // console.log(details);
@@ -42,3 +42,4 @@ chrome.webRequest.onBeforeRequest.addListener(
     {urls: ["<all_urls>"]},
     ['requestBody']
 );
+*/
