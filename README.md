@@ -15,6 +15,15 @@ npm -v # version 6.10
 #install @vue-cli
 npm install -g @vue-cli
 
+#install watch
+npm install watch
+
+#install axios
+npm install axios --save
+
+#install vue-axios
+npm install vue-axios --save
+
 #create vue-cli project
 vue init kocal/vue-web-extension app_name
 
