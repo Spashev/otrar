@@ -2,7 +2,7 @@
     <div id="app">
         <img src="/icons/logo.png" width="180px" height="180px">
 
-        <table v-if="type" border="1">
+        <table v-if="type" border="2" style="border-collapse: collapse">
             <thead>
                 <th>Id</th>
                 <th>Code</th>
@@ -119,7 +119,7 @@ export default {
                 });
             })
             .catch(function(error) {
-
+                //Some error handling
             });
         },
     }
