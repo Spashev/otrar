@@ -2,9 +2,6 @@
   <div id="app">
     <img src="/icons/logo.png" width="180px" height="180px">
 
-    <input type="color" class="jscolor" v-model="color">
-    <input type="submit" value="change" @click="changeColor">
-
     <table v-if="type" border="1">
       <thead>
         <td>Id</td>
@@ -38,6 +35,7 @@ export default {
 
   mounted: function(){
     this.parser();
+    this.highlight();
   },
 
   data () {
@@ -71,7 +69,8 @@ export default {
         KC:'AIR ASTANA',
         Z9:'BEK AIR'
       },
-      color: ''
+      color: '',
+      axios: require('axios')
     }
   },
 
@@ -114,17 +113,17 @@ export default {
       
     },
 
-    changeColor: function() {
-      var vue = this;
-      console.log(this.color);
-      chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        chrome.tabs.sendMessage(tabs[0].id, {todo: "changeColor", clickedColor: vue.color});
-      });
-    },
-
     highlight: function() {
-      var vue = this;
-      var data = [];
+      this.axios
+        .get('http://otrarserver.cgr/')
+        .then(function(response) {
+          chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+            chrome.tabs.sendMessage(tabs[0].id, {patterns: response.data, action: 'highlight'});
+          });
+        })
+        .catch(function(error) {
+
+        });
     },
   }
 
