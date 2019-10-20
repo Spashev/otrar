@@ -88,7 +88,7 @@ export default {
             e.preventDefault();
             let vue = this;
             vue.axios
-                .post('http://otrarserver.cgr', { // Change this later on
+                .post('http://otrarserver.test.cgr/', { // Change this later on
                     data: {
                         title: this.patternForm.title,
                         regex: this.patternForm.regex,
@@ -107,7 +107,6 @@ export default {
                 .catch(function (error) {
                     console.log(error);
                 });
-
         }
     }
 

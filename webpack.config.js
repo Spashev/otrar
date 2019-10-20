@@ -14,7 +14,6 @@ const config = {
     'popup/popup': './popup/popup.js',
     'content': './content.js',
     'options/options': './options/options.js',
-    'jscolor/jscolor': './jscolor/jscolor.js',
   },
   output: {
     path: __dirname + '/dist',
