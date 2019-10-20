@@ -4,7 +4,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
     if (sender.hasOwnProperty('tab')) {
         const axios = require('axios');
         axios
-            .get('http://otrarserver.cgr/') // Change this later on
+            .get('http://otrarserver.test.cgr/') // Change this later on
             .then(function(response) {
                 chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
                     chrome.tabs.sendMessage(tabs[0].id, {patterns: response.data, action: 'highlight'});
