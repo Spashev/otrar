@@ -70,7 +70,6 @@ export default {
                 Z9:'BEK AIR'
             },
             color: '',
-            axios: require('axios')
         }
     },
 
@@ -111,16 +110,16 @@ export default {
         },
 
         highlight: function() {
-        this.axios
-            .get('http://otrarserver.cgr/') // Change this later on
-            .then(function(response) {
-                chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-                    chrome.tabs.sendMessage(tabs[0].id, {patterns: response.data, action: 'highlight'});
-                });
-            })
-            .catch(function(error) {
-                //Some error handling
-            });
+            // this.axios
+            //     .get('http://otrarserver.cgr/') // Change this later on
+            //     .then(function(response) {
+            //         chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+            //             chrome.tabs.sendMessage(tabs[0].id, {patterns: response.data, action: 'highlight'});
+            //         });
+            //     })
+            //     .catch(function(error) {
+            //         //Some error handling
+            //     });
         },
     }
 
