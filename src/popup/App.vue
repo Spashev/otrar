@@ -69,7 +69,7 @@ export default {
                 KC:'AIR ASTANA',
                 Z9:'BEK AIR'
             },
-            color: '',
+            color: ''
         }
     },
 
